@@ -27,6 +27,7 @@ conda install lib_name=version
 conda create --name new_env --copy --clone old_env
 conda remove lib_name
 conda env remove --name env_name
+
 # Advanced
 conda config --add channels conda-forge
 conda install --channel conda-forge lib_name
@@ -34,6 +35,7 @@ conda list --revision
 conda install --revision number
 conda env export --from-history --file environment.yml
 conda env create --file environment.yml
+
 # Mamba
 conda install --channel conda-forge mamba
 mamba --help
@@ -99,11 +101,13 @@ DATA_DIRmakedir("external_fs", recreate = True)
 # Pyprojroot: start point and routes
 import pyprojroot # Works with Pathlib!
 pyprojroot.here("data").joinpath("raw")
+
 # Pyhere: start point and routes
 import pyhere # Works with Pathlib!
 pyhere.here()
 pyhere.here().resolve()
 pyhere.here().resolve() / "data" / "raw"
+
 # Creating shortcuts
 def make_dir_function(dir_name):
     def dir_function(*args):
