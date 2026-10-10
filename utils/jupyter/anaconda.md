@@ -4,6 +4,26 @@ Let's refresh here some basic but helpful commands for the upcoming exercises an
 
 ### Anaconda 🐍
 ```sh
+# Command Line
+!pip install session_info
+!pwd
+!cat drive/myDrive/iris.csv
+
+# Tips Google Colab
+Ctrl + Enter # Execute cell
+Ctrl + M + A # Add code cell before
+Ctrl + M + B # Add code cell after
+Ctrl + M + K # Move cell upward
+Ctrl + M + J # Move cell downward
+Ctrl + M + D # Erase cell
+
+# Convert tabular data into interactive screens
+%load_ext google.colab.data_table # Activate
+%unload_ext google.colab.data_table # Deactivate
+
+import session_info
+session_info.show()
+
 # Basic
 conda info
 conda env list
